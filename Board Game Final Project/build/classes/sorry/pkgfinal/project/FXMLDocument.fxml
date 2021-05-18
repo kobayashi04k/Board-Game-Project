@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="660.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sorry.pkgfinal.project.FXMLDocumentController">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6aa4d7" height="670.0" stroke="BLACK" strokeType="INSIDE" width="1063.0" />
+      <Label fx:id="lblPlayerOneGold" layoutX="44.0" layoutY="35.0" prefHeight="27.0" prefWidth="130.0" text="Player 1's Gold:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPlayerTwoGold" layoutX="44.0" layoutY="82.0" prefHeight="24.0" prefWidth="130.0" text="Player 2's Gold:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdcdcd" height="516.0" layoutX="36.0" layoutY="133.0" stroke="BLACK" strokeType="INSIDE" width="209.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" layoutX="58.0" layoutY="163.0" stroke="BLACK" strokeType="INSIDE" width="164.0" />
+      <Label layoutX="82.0" layoutY="333.0" text="HP: ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblProfileHP" layoutX="122.0" layoutY="333.0" text="10">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="366.0" text="ATK: ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblProfileAttack" layoutX="122.0" layoutY="366.0" text="10">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="402.0" text="DEF:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblProfileDefense" layoutX="122.0" layoutY="402.0" text="10">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="95.0" layoutY="442.0" text="Total Cost:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotalCost" layoutX="171.0" layoutY="441.0" prefHeight="22.0" prefWidth="50.0" text="0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnIncreaseHP" disable="true" layoutX="183.0" layoutY="331.0" mnemonicParsing="false" onAction="#handleIncreaseHP" text="+" />
+      <Button fx:id="btnDecreaseHP" disable="true" layoutX="154.0" layoutY="331.0" mnemonicParsing="false" onAction="#handleDecreaseHP" prefHeight="25.0" prefWidth="25.0" text="-" />
+      <Button fx:id="btnDecreaseAttack" disable="true" layoutX="154.0" layoutY="364.0" mnemonicParsing="false" onAction="#handleDecreaseAttack" prefHeight="25.0" prefWidth="25.0" text="-" />
+      <Button fx:id="btnDecreaseDefense" disable="true" layoutX="154.0" layoutY="399.0" mnemonicParsing="false" onAction="#handleDecreaseDefense" prefHeight="25.0" prefWidth="25.0" text="-" />
+      <Button fx:id="btnIncreaseAttack" disable="true" layoutX="183.0" layoutY="364.0" mnemonicParsing="false" onAction="#handleIncreaseAttack" text="+" />
+      <Button fx:id="btnIncreaseDefense" disable="true" layoutX="183.0" layoutY="399.0" mnemonicParsing="false" onAction="#handleIncreaseDefense" text="+" />
+      <Button fx:id="btnApply" disable="true" layoutX="111.0" layoutY="471.0" mnemonicParsing="false" onAction="#handleApply" prefHeight="26.0" prefWidth="59.0" text="Apply" />
+      <Label layoutX="115.0" layoutY="506.0" text="Ability: ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnUnlockAbility" disable="true" layoutX="53.0" layoutY="537.0" mnemonicParsing="false" onAction="#handleUnlockAbility" prefHeight="26.0" prefWidth="174.0" text="Unlock for 200 Gold" />
+      <Label fx:id="lblProfileAbility" layoutX="101.0" layoutY="573.0" prefHeight="19.0" prefWidth="80.0" textAlignment="CENTER" underline="true">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="P1Gold" layoutX="181.0" layoutY="35.0" text="100">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="P2Gold" layoutX="181.0" layoutY="82.0" text="100">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="265.0" layoutY="560.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="265.0" layoutY="486.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="265.0" layoutY="412.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="265.0" layoutY="338.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="265.0" layoutY="264.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="265.0" layoutY="190.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="265.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="265.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="340.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="414.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="488.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="562.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="636.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="710.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="784.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="858.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="932.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="932.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="932.0" layoutY="190.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="932.0" layoutY="264.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="932.0" layoutY="338.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="932.0" layoutY="412.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="932.0" layoutY="486.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="932.0" layoutY="560.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="340.0" layoutY="560.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="414.0" layoutY="560.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="858.0" layoutY="560.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="784.0" layoutY="560.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="488.0" layoutY="560.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="488.0" layoutY="486.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="488.0" layoutY="412.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="710.0" layoutY="560.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="710.0" layoutY="486.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="70.0" layoutX="710.0" layoutY="412.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="130.0" layoutX="458.0" layoutY="278.0" stroke="BLACK" strokeType="INSIDE" width="130.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#500b61" height="130.0" layoutX="680.0" layoutY="278.0" stroke="BLACK" strokeType="INSIDE" width="130.0" />
+      <Button fx:id="btnRoll" layoutX="606.0" layoutY="449.0" mnemonicParsing="false" onAction="#handleDiceRoll" prefHeight="25.0" prefWidth="59.0" text="Roll" />
+      <Button fx:id="btnMove" disable="true" layoutX="607.0" layoutY="561.0" mnemonicParsing="false" onAction="#handleMovePiece" prefHeight="25.0" prefWidth="59.0" text="Move" />
+      <ImageView fx:id="imgDice" fitHeight="70.0" fitWidth="70.0" layoutX="601.0" layoutY="484.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="lblPlayerTurn" layoutX="579.0" layoutY="166.0" textAlignment="CENTER">
+         <font>
+            <Font name="AGaramondPro-Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="537.0" layoutY="129.0" text="Dungeons and Soy">
+         <font>
+            <Font name="Algerian" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgRC0" fitHeight="50.0" fitWidth="50.0" layoutX="467.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT0" fitHeight="50.0" fitWidth="50.0" layoutX="530.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS0" fitHeight="50.0" fitWidth="50.0" layoutX="467.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK0" fitHeight="50.0" fitWidth="50.0" layoutX="530.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC1" fitHeight="25.0" fitWidth="25.0" layoutX="493.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC2" fitHeight="25.0" fitWidth="25.0" layoutX="493.0" layoutY="494.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC3" fitHeight="25.0" fitWidth="25.0" layoutX="494.0" layoutY="570.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC4" fitHeight="25.0" fitWidth="25.0" layoutX="420.0" layoutY="567.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC5" fitHeight="25.0" fitWidth="25.0" layoutX="345.0" layoutY="565.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC6" fitHeight="25.0" fitWidth="25.0" layoutX="271.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC7" fitHeight="25.0" fitWidth="25.0" layoutX="271.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC8" fitHeight="25.0" fitWidth="25.0" layoutX="271.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC9" fitHeight="25.0" fitWidth="25.0" layoutX="271.0" layoutY="344.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC10" fitHeight="25.0" fitWidth="25.0" layoutX="271.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC11" fitHeight="25.0" fitWidth="25.0" layoutX="271.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC12" fitHeight="25.0" fitWidth="25.0" layoutX="271.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC13" fitHeight="25.0" fitWidth="25.0" layoutX="271.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC14" fitHeight="25.0" fitWidth="25.0" layoutX="345.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC15" fitHeight="25.0" fitWidth="25.0" layoutX="420.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC16" fitHeight="25.0" fitWidth="25.0" layoutX="494.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC17" fitHeight="25.0" fitWidth="25.0" layoutX="568.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC18" fitHeight="25.0" fitWidth="25.0" layoutX="642.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC19" fitHeight="25.0" fitWidth="25.0" layoutX="716.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC20" fitHeight="25.0" fitWidth="25.0" layoutX="790.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC21" fitHeight="25.0" fitWidth="25.0" layoutX="864.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC22" fitHeight="25.0" fitWidth="25.0" layoutX="938.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC23" fitHeight="25.0" fitWidth="25.0" layoutX="938.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC24" fitHeight="25.0" fitWidth="25.0" layoutX="938.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC25" fitHeight="25.0" fitWidth="25.0" layoutX="938.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC26" fitHeight="25.0" fitWidth="25.0" layoutX="938.0" layoutY="344.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC27" fitHeight="25.0" fitWidth="25.0" layoutX="938.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC28" fitHeight="25.0" fitWidth="25.0" layoutX="938.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC29" fitHeight="25.0" fitWidth="25.0" layoutX="938.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC30" fitHeight="25.0" fitWidth="25.0" layoutX="864.0" layoutY="565.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC31" fitHeight="25.0" fitWidth="25.0" layoutX="790.0" layoutY="565.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC32" fitHeight="25.0" fitWidth="25.0" layoutX="716.0" layoutY="565.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC33" fitHeight="25.0" fitWidth="25.0" layoutX="716.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC34" fitHeight="25.0" fitWidth="25.0" layoutX="716.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRC35" fitHeight="50.0" fitWidth="50.0" layoutX="691.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS1" fitHeight="25.0" fitWidth="25.0" layoutX="493.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS2" fitHeight="25.0" fitWidth="25.0" layoutX="493.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS3" fitHeight="25.0" fitWidth="25.0" layoutX="493.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS4" fitHeight="25.0" fitWidth="25.0" layoutX="420.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS5" fitHeight="25.0" fitWidth="25.0" layoutX="345.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS6" fitHeight="25.0" fitWidth="25.0" layoutX="271.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS7" fitHeight="25.0" fitWidth="25.0" layoutX="271.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS8" fitHeight="25.0" fitWidth="25.0" layoutX="271.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS9" fitHeight="25.0" fitWidth="25.0" layoutX="271.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS10" fitHeight="25.0" fitWidth="25.0" layoutX="271.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS11" fitHeight="25.0" fitWidth="25.0" layoutX="271.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS12" fitHeight="25.0" fitWidth="25.0" layoutX="271.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS13" fitHeight="25.0" fitWidth="25.0" layoutX="271.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS14" fitHeight="25.0" fitWidth="25.0" layoutX="345.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS15" fitHeight="25.0" fitWidth="25.0" layoutX="420.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS16" fitHeight="25.0" fitWidth="25.0" layoutX="494.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS17" fitHeight="25.0" fitWidth="25.0" layoutX="568.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS18" fitHeight="25.0" fitWidth="25.0" layoutX="642.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS19" fitHeight="25.0" fitWidth="25.0" layoutX="716.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS20" fitHeight="25.0" fitWidth="25.0" layoutX="790.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS21" fitHeight="25.0" fitWidth="25.0" layoutX="864.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS22" fitHeight="25.0" fitWidth="25.0" layoutX="938.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS23" fitHeight="25.0" fitWidth="25.0" layoutX="938.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS24" fitHeight="25.0" fitWidth="25.0" layoutX="938.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS25" fitHeight="25.0" fitWidth="25.0" layoutX="938.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS26" fitHeight="25.0" fitWidth="25.0" layoutX="938.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS28" fitHeight="25.0" fitWidth="25.0" layoutX="938.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS27" fitHeight="25.0" fitWidth="25.0" layoutX="938.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS29" fitHeight="25.0" fitWidth="25.0" layoutX="938.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS30" fitHeight="25.0" fitWidth="25.0" layoutX="864.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS32" fitHeight="25.0" fitWidth="25.0" layoutX="716.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS31" fitHeight="25.0" fitWidth="25.0" layoutX="790.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS33" fitHeight="25.0" fitWidth="25.0" layoutX="716.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS34" fitHeight="25.0" fitWidth="25.0" layoutX="716.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRS35" fitHeight="50.0" fitWidth="50.0" layoutX="691.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT35" fitHeight="50.0" fitWidth="50.0" layoutX="748.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK35" fitHeight="50.0" fitWidth="50.0" layoutX="748.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT1" fitHeight="25.0" fitWidth="25.0" layoutX="527.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT2" fitHeight="25.0" fitWidth="25.0" layoutX="527.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT3" fitHeight="25.0" fitWidth="25.0" layoutX="527.0" layoutY="565.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT4" fitHeight="25.0" fitWidth="25.0" layoutX="453.0" layoutY="565.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT5" fitHeight="25.0" fitWidth="25.0" layoutX="379.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT6" fitHeight="25.0" fitWidth="25.0" layoutX="305.0" layoutY="567.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT7" fitHeight="25.0" fitWidth="25.0" layoutX="305.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT8" fitHeight="25.0" fitWidth="25.0" layoutX="305.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT9" fitHeight="25.0" fitWidth="25.0" layoutX="305.0" layoutY="344.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT10" fitHeight="25.0" fitWidth="25.0" layoutX="305.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT11" fitHeight="25.0" fitWidth="25.0" layoutX="305.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT12" fitHeight="25.0" fitWidth="25.0" layoutX="305.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT13" fitHeight="25.0" fitWidth="25.0" layoutX="305.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT14" fitHeight="25.0" fitWidth="25.0" layoutX="379.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT15" fitHeight="25.0" fitWidth="25.0" layoutX="453.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT16" fitHeight="25.0" fitWidth="25.0" layoutX="527.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT17" fitHeight="25.0" fitWidth="25.0" layoutX="601.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT18" fitHeight="25.0" fitWidth="25.0" layoutX="675.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT19" fitHeight="25.0" fitWidth="25.0" layoutX="749.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT119" fitHeight="25.0" fitWidth="25.0" layoutX="823.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT20" fitHeight="25.0" fitWidth="25.0" layoutX="823.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT21" fitHeight="25.0" fitWidth="25.0" layoutX="897.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT22" fitHeight="25.0" fitWidth="25.0" layoutX="971.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT23" fitHeight="25.0" fitWidth="25.0" layoutX="971.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT24" fitHeight="25.0" fitWidth="25.0" layoutX="971.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT25" fitHeight="25.0" fitWidth="25.0" layoutX="971.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT26" fitHeight="25.0" fitWidth="25.0" layoutX="971.0" layoutY="344.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT27" fitHeight="25.0" fitWidth="25.0" layoutX="971.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT28" fitHeight="25.0" fitWidth="25.0" layoutX="971.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT29" fitHeight="25.0" fitWidth="25.0" layoutX="971.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT30" fitHeight="25.0" fitWidth="25.0" layoutX="897.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT131" fitHeight="25.0" fitWidth="25.0" layoutX="823.0" layoutY="567.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT31" fitHeight="25.0" fitWidth="25.0" layoutX="823.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT32" fitHeight="25.0" fitWidth="25.0" layoutX="749.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT33" fitHeight="25.0" fitWidth="25.0" layoutX="749.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRT34" fitHeight="25.0" fitWidth="25.0" layoutX="749.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK1" fitHeight="25.0" fitWidth="25.0" layoutX="529.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK2" fitHeight="25.0" fitWidth="25.0" layoutX="527.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK3" fitHeight="25.0" fitWidth="25.0" layoutX="527.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK4" fitHeight="25.0" fitWidth="25.0" layoutX="453.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK5" fitHeight="25.0" fitWidth="25.0" layoutX="379.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK6" fitHeight="25.0" fitWidth="25.0" layoutX="305.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK7" fitHeight="25.0" fitWidth="25.0" layoutX="305.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK8" fitHeight="25.0" fitWidth="25.0" layoutX="305.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK9" fitHeight="25.0" fitWidth="25.0" layoutX="305.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK10" fitHeight="25.0" fitWidth="25.0" layoutX="305.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK12" fitHeight="25.0" fitWidth="25.0" layoutX="305.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK13" fitHeight="25.0" fitWidth="25.0" layoutX="305.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK14" fitHeight="25.0" fitWidth="25.0" layoutX="379.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK15" fitHeight="25.0" fitWidth="25.0" layoutX="453.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK16" fitHeight="25.0" fitWidth="25.0" layoutX="527.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK17" fitHeight="25.0" fitWidth="25.0" layoutX="601.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK18" fitHeight="25.0" fitWidth="25.0" layoutX="675.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK19" fitHeight="25.0" fitWidth="25.0" layoutX="749.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK20" fitHeight="25.0" fitWidth="25.0" layoutX="823.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK21" fitHeight="25.0" fitWidth="25.0" layoutX="897.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK22" fitHeight="25.0" fitWidth="25.0" layoutX="971.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK23" fitHeight="25.0" fitWidth="25.0" layoutX="971.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK24" fitHeight="25.0" fitWidth="25.0" layoutX="971.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK25" fitHeight="25.0" fitWidth="25.0" layoutX="971.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK124" fitHeight="25.0" fitWidth="25.0" layoutX="971.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK26" fitHeight="25.0" fitWidth="25.0" layoutX="971.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK27" fitHeight="25.0" fitWidth="25.0" layoutX="971.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK28" fitHeight="25.0" fitWidth="25.0" layoutX="971.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK29" fitHeight="25.0" fitWidth="25.0" layoutX="971.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK30" fitHeight="25.0" fitWidth="25.0" layoutX="897.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK31" fitHeight="25.0" fitWidth="25.0" layoutX="823.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK32" fitHeight="25.0" fitWidth="25.0" layoutX="749.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK33" fitHeight="25.0" fitWidth="25.0" layoutX="749.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK34" fitHeight="25.0" fitWidth="25.0" layoutX="749.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRK11" fitHeight="25.0" fitWidth="25.0" layoutX="305.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgP1Heart1" fitHeight="35.0" fitWidth="35.0" layoutX="467.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgP1Heart2" fitHeight="35.0" fitWidth="35.0" layoutX="506.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgP1Heart3" fitHeight="35.0" fitWidth="35.0" layoutX="545.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgP2Heart1" fitHeight="35.0" fitWidth="35.0" layoutX="689.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgP2Heart2" fitHeight="35.0" fitWidth="35.0" layoutX="728.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgP2Heart3" fitHeight="35.0" fitWidth="35.0" layoutX="767.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRedCircle" fitHeight="50.0" fitWidth="50.0" layoutX="376.0" layoutY="167.0" onMouseClicked="#handleRedCircle" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRedSquare" fitHeight="50.0" fitWidth="50.0" layoutX="376.0" layoutY="264.0" onMouseClicked="#handleRedSquare" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRedTriangle" fitHeight="50.0" fitWidth="50.0" layoutX="376.0" layoutY="363.0" onMouseClicked="#handleRedTriangle" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgRedKite" fitHeight="70.0" fitWidth="70.0" layoutX="370.0" layoutY="449.0" onMouseClicked="#handleRedKite" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgBlueCircle" fitHeight="50.0" fitWidth="50.0" layoutX="847.0" layoutY="166.0" onMouseClicked="#handleBlueCircle" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgBlueSquare" fitHeight="50.0" fitWidth="50.0" layoutX="847.0" layoutY="264.0" onMouseClicked="#handleBlueSquare" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgBlueTriangle" fitHeight="50.0" fitWidth="50.0" layoutX="847.0" layoutY="367.0" onMouseClicked="#handleBlueTriangle" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgBlueKite" fitHeight="70.0" fitWidth="70.0" layoutX="837.0" layoutY="453.0" onMouseClicked="#handleBlueKite" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgProfilePicture" fitHeight="150.0" fitWidth="157.0" layoutX="62.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="lblError" layoutX="552.0" layoutY="195.0" prefHeight="27.0" prefWidth="174.0">
+         <font>
+            <Font name="AGaramondPro-Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblProfileAbilityDescription" layoutX="59.0" layoutY="590.0" prefHeight="42.0" prefWidth="164.0" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="rectBlue" arcHeight="5.0" arcWidth="5.0" fill="#75a1c9" height="670.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="1063.0" />
+      <AnchorPane fx:id="anchorPaneBattle" layoutX="1.0" layoutY="1.0" prefHeight="660.0" prefWidth="1063.0" visible="false">
+         <children>
+            <ImageView fx:id="imgBattlePieceOne" fitHeight="150.0" fitWidth="164.0" layoutX="263.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgBattlePieceTwo" fitHeight="150.0" fitWidth="164.0" layoutX="637.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="lblBattleHPOne" layoutX="305.0" layoutY="343.0" prefHeight="17.0" prefWidth="97.0" text="HP: ">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="lblBattleAttackOne" layoutX="305.0" layoutY="385.0" prefHeight="17.0" prefWidth="97.0" text="Attack: ">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="lblBattleDefenseOne" layoutX="305.0" layoutY="427.0" prefHeight="17.0" prefWidth="97.0" text="Defense:">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="lblBattleHPTwo" layoutX="670.0" layoutY="343.0" prefHeight="17.0" prefWidth="97.0" text="HP: ">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="lblBattleAttackTwo" layoutX="670.0" layoutY="385.0" prefHeight="17.0" prefWidth="97.0" text="Attack: ">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="lblBattleDefenseTwo" layoutX="670.0" layoutY="427.0" prefHeight="17.0" prefWidth="97.0" text="Defense:">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Button fx:id="btnAttackOne" disable="true" layoutX="305.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleAttackOne" prefHeight="26.0" prefWidth="80.0" text="Attack" />
+            <Button fx:id="btnDefenseOne" disable="true" layoutX="305.0" layoutY="530.0" mnemonicParsing="false" onAction="#handleDefenseOne" prefHeight="26.0" prefWidth="80.0" text="Defense" />
+            <Button fx:id="btnAttackTwo" disable="true" layoutX="679.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleAttackTwo" prefHeight="26.0" prefWidth="80.0" text="Attack" />
+            <Button fx:id="btnDefenseTwo" disable="true" layoutX="679.0" layoutY="530.0" mnemonicParsing="false" onAction="#handleDefenseTwo" prefHeight="26.0" prefWidth="80.0" text="Defense" />
+            <Button fx:id="btnBattleDice" disable="true" layoutX="496.0" layoutY="385.0" mnemonicParsing="false" onAction="#handleBattleRoll" prefHeight="26.0" prefWidth="70.0" text="Roll" />
+            <ImageView fx:id="imgBattleDice" fitHeight="80.0" fitWidth="80.0" layoutX="491.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="lblBattlePlayerTurn" contentDisplay="CENTER" layoutX="475.0" layoutY="74.0" prefHeight="27.0" prefWidth="336.0" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblBattlePlayerDamage" contentDisplay="CENTER" layoutX="427.0" layoutY="122.0" prefHeight="27.0" prefWidth="316.0" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c06c7" height="670.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3c34d2" height="26.0" layoutY="642.0" stroke="BLACK" strokeType="INSIDE" width="1063.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2019af" height="27.0" stroke="BLACK" strokeType="INSIDE" width="1063.0" />
+            <Button fx:id="btnReturn" layoutX="473.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleReturnToBoard" prefHeight="42.0" prefWidth="130.0" text="Return To Board" textAlignment="CENTER" visible="false" wrapText="true" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3a07c5" height="670.0" layoutX="1036.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="27.0" />
+            <ImageView fx:id="imgX2One" fitHeight="42.0" fitWidth="42.0" layoutX="416.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgX2Two" fitHeight="42.0" fitWidth="42.0" layoutX="780.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgPoisonOne" fitHeight="42.0" fitWidth="42.0" layoutX="374.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgPoisonTwo" fitHeight="42.0" fitWidth="42.0" layoutX="747.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgLuckyDice" fitHeight="42.0" fitWidth="42.0" layoutX="510.0" layoutY="509.0" pickOnBounds="true" preserveRatio="true" />
+         </children></AnchorPane>
+      <Button fx:id="btnMainMenu" layoutX="597.0" layoutY="216.0" mnemonicParsing="false" onAction="#handleMainMenu" prefHeight="50.0" prefWidth="70.0" text="Menu" textAlignment="CENTER" visible="false" wrapText="true" />
+      <Rectangle fx:id="rectHowToPlay" arcHeight="5.0" arcWidth="5.0" fill="#75a1c9" height="670.0" stroke="BLACK" strokeType="INSIDE" width="1064.0" />
+      <AnchorPane fx:id="anchorPaneHowToPlay" prefHeight="670.0" prefWidth="1063.0">
+         <children>
+            <Label layoutX="418.0" layoutY="49.0" text="How To Play" underline="true">
+               <font>
+                  <Font name="Impact" size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="107.0" layoutY="168.0" prefHeight="60.0" prefWidth="846.0" text="Move your pieces into the other player's base as you control your pieces into battles along the way" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="511.0" layoutY="236.0" text="Gold">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="511.0" layoutY="138.0" text="Goal">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="72.0" layoutY="266.0" prefHeight="60.0" prefWidth="921.0" text="Gain gold with every space you move on the board. Use the gold to purchase upgrades to your stats and abilities" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="498.0" layoutY="323.0" text="Battles">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="365.0" prefHeight="89.0" prefWidth="1034.0" text="Whenever you pass an enemy piece, you engage in a battle. Winner stays on the board, and the Loser gets sent back to base. During the battle, each player will decide either to Attack or Defend on their next turn. Then, their next turn will proceed with their action chosen." textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="492.0" layoutY="471.0" text="Abilities">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="155.0" layoutY="525.0" mnemonicParsing="false" onAction="#handlePoisonAttack" prefHeight="42.0" prefWidth="130.0" text="Poison Attack" />
+            <Button layoutX="367.0" layoutY="525.0" mnemonicParsing="false" onAction="#handleUpgradeSale" prefHeight="42.0" prefWidth="130.0" text="Upgrade Sale" />
+            <Button layoutX="574.0" layoutY="525.0" mnemonicParsing="false" onAction="#handleLuckyDice" prefHeight="42.0" prefWidth="130.0" text="Lucky Dice" />
+            <Button layoutX="781.0" layoutY="525.0" mnemonicParsing="false" onAction="#handleLastResort" prefHeight="42.0" prefWidth="130.0" text="Last Resort" />
+            <Label fx:id="lblBio" layoutX="268.0" layoutY="590.0" prefHeight="60.0" prefWidth="642.0" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="948.0" layoutY="615.0" mnemonicParsing="false" onAction="#handleStartGame" prefHeight="42.0" prefWidth="98.0" text="Start Game" />
+         </children>
+      </AnchorPane>
+      <Rectangle fx:id="rectMainMenu" arcHeight="5.0" arcWidth="5.0" fill="#75a1c9" height="670.0" layoutX="1.0" stroke="BLACK" strokeType="INSIDE" width="1064.0" />
+      <AnchorPane fx:id="anchorPaneMainMenu" layoutX="1.0" layoutY="-1.0" prefHeight="670.0" prefWidth="1063.0">
+         <children>
+            <Label layoutX="365.0" layoutY="181.0" prefHeight="70.0" prefWidth="382.0" text="Dungeons and Soy">
+               <font>
+                  <Font name="Impact" size="48.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgBorder" fitHeight="284.0" fitWidth="580.0" layoutX="365.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgBorderBorder" fitHeight="615.0" fitWidth="1034.0" layoutX="52.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" />
+            <Button layoutX="451.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleStartGame" prefHeight="70.0" prefWidth="187.0" text="Start Game">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="451.0" layoutY="522.0" mnemonicParsing="false" onAction="#handleHowToPlay" prefHeight="70.0" prefWidth="187.0" text="How To Play">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
